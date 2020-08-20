@@ -62,7 +62,7 @@ preferences {
     }
 
     section ("InfluxDB Database:") {
-        input "prefDatabaseHost", "text", title: "Host", defaultValue: "10.10.10.10", required: true
+        input "prefDatabaseHost", "text", title: "Host", defaultValue: "192.168.1.87", required: true
         input "prefDatabasePort", "text", title: "Port", defaultValue: "8086", required: true
         input "prefDatabaseName", "text", title: "Database Name", defaultValue: "", required: true
         input "prefDatabaseUser", "text", title: "Username", required: false
