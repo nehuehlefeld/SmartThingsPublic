@@ -62,7 +62,7 @@ preferences {
     }
 
     section ("InfluxDB Database:") {
-        input "prefDatabaseHost", "text", title: "Host", defaultValue: "192.168.1.87", required: true
+        input "prefDatabaseHost", "text", title: "Host", defaultValue: "10.10.10.10", required: true
         input "prefDatabasePort", "text", title: "Port", defaultValue: "8086", required: true
         input "prefDatabaseName", "text", title: "Database Name", defaultValue: "", required: true
         input "prefDatabaseUser", "text", title: "Username", required: false
@@ -790,8 +790,11 @@ private escapeStringForInfluxDB(str) {
 private getGroupName(id) {
 
     if (id == null) {return 'Home'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Kitchen'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Lounge'}
-    else if (id == 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX') {return 'Office'}
-    else {return 'Unknown'}    
+    else if (id == '40b3dd56-fc84-4530-93e4-0fd6ad42ee3c') {return 'Pantry'}
+    else if (id == '62f4315e-7dbc-413e-8532-9a42717331f6') {return 'Study'}
+    else if (id == '9c6f402a-3625-4baf-9e4b-78874101cafe') {return 'Garage'}
+    else if (id == 'bcd82a80-18b6-45dd-94e2-d818a4242fc2') {return 'Pump house'}
+    else if (id == 'e640a423-e77c-4a09-bcc7-ae114985f7da') {return 'Front door'}
+    else if (id == 'e98d54a0-0f31-4014-b1f3-2f668ff0d23d') {return 'Outdoor Christmas Lights'}
+else {return 'Unknown'}    
 }
